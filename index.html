@@ -39,7 +39,7 @@
 
       <!-- Build a three column layout for each question category -->
       <div class="row">
-        <form>
+
           <div class="col-sm-4 bgColumn">
             <div class="panel panel-primary">
               <div class="panel-heading bgHeading">
@@ -53,6 +53,11 @@
                   <input class="form-control" type="text" name="userName" id="userName" required>
                 </form>
               </div>
+            </div>
+            <div class="buttonContainer">
+              <p>When you have finished selecting your information, you can use the buttons below to either submit or start over.</p>
+              <button type="submit" class="btn btn-danger" id="submit">Submit</button>
+              <button type="reset" class="btn btn-danger" id="reset">Start Over</button>
             </div>
           </div>
 
@@ -141,11 +146,7 @@
               </div>
             </div>
           </div>
-          <div class="buttonContainer">
-            <button type="submit" class="btn btn-danger" id="submit">Submit</button>
-            <button type="reset" class="btn btn-danger" id="reset">Start Over</button>
-          </div>
-        </form>
+
       </div>
       <!-- End question columns -->
 

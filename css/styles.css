@@ -11,3 +11,8 @@
   float: left;
   padding-right: 10px;
 }
+
+.buttonContainer {
+  border: 1px solid lightblue;
+  text-align: center;
+}

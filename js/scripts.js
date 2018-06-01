@@ -1,6 +1,7 @@
 $(document).ready(function() {
+  $(".pre-hidden").hide();
 
-  $("#submit").click(function() {
+  $(".superForm").submit(function(event) {
     var result = checkResults();
     var language;
     var type;
@@ -8,8 +9,8 @@ $(document).ready(function() {
     var knowsDesktopCoding = $("#yesDesktop").is(":checked");
     var knowsWebDev = $("#yesWeb").is(":checked");
     var likesWebDev = $("#yesWebDev").is(":checked");
-    var likesOOP = $("yesObject").is(":checked");
-    var likesStronglyTyped = $("yesStrong").is(":checked");
+    var likesOOP = $("#yesObject").is(":checked");
+    var likesStronglyTyped = $("#yesStrong").is(":checked");
 
     switch(result) {
       case 0:
@@ -34,19 +35,48 @@ $(document).ready(function() {
     $("#resultLanguage").text(language);
     $("#headerLanguage").text(language);
     $("#resultLanguageType").text(type);
+    $("#langHeader").text(language);
 
     if(knowsDesktopCoding) {
-      $()
+      $("#resultDesktop").text("do");
+    } else {
+      $("#resultDesktop").text("do not");
+    }
+
+    if(knowsWebDev) {
+      $("#resultWeb").text("do");
+    } else {
+      $("#resultWeb").text("do not");
+    }
+
+    if(likesWebDev) {
+      $("#resultWebDev").text("interest in web development");
+    } else {
+      $("#resultWebDev").text("no interest in web development");
+    }
+
+    if(likesOOP) {
+      $("#resultObject").text("interest in object-oriented programming");
+    } else {
+      $("#resultObject").text("no interest in object-oriented programming");
+    }
+
+    if(likesStronglyTyped) {
+      $("#resultTyped").text("strongly");
+    } else {
+      $("#resultTyped").text("weakly");
     }
 
 
-    $(".pre-hidden").show();
+    $(".pre-hidden").hide().fadeIn(3000);
+    window.scrollTo(0,document.body.scrollHeight);
+    event.preventDefault();
   });
 
-  $("#reset").click(function() {
+  $("#resetButton").click(function() {
     $("input").attr("disabled", false);
     $("span").text("");
-    $(".pre-hidden").hide();
+    $(".pre-hidden").show().fadeOut();
   });
 
   $("input").click(function() {
@@ -58,8 +88,8 @@ $(document).ready(function() {
     var knowsDesktopCoding = $("#yesDesktop").is(":checked");
     var knowsWebDev = $("#yesWeb").is(":checked");
     var likesWebDev = $("#yesWebDev").is(":checked");
-    var likesOOP = $("yesObject").is(":checked");
-    var likesStronglyTyped = $("yesStrong").is(":checked");
+    var likesOOP = $("#yesObject").is(":checked");
+    var likesStronglyTyped = $("#yesStrong").is(":checked");
 
     if(knowsDesktopCoding && likesOOP && likesStronglyTyped) {
       return 0; // C#

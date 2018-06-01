@@ -93,9 +93,35 @@ $(document).ready(function() {
     resetForms();
   });
 
+  /*
   $("input").click(function() {
     $(this).attr("disabled", true);
     $("#userName").attr("disabled", false);
+  });
+  */
+
+  $('input[name="coding"]').click(function() {
+    $('input[name="coding"]').attr("disabled", true);
+  });
+
+  $('input[name="desktop"]').click(function() {
+    $('input[name="desktop"]').attr("disabled", true);
+  });
+
+  $('input[name="web"]').click(function() {
+    $('input[name="web"]').attr("disabled", true);
+  });
+
+  $('input[name="webDev"]').click(function() {
+    $('input[name="webDev"]').attr("disabled", true);
+  });
+
+  $('input[name="object"]').click(function() {
+    $('input[name="object"]').attr("disabled", true);
+  });
+
+  $('input[name="strong"]').click(function() {
+    $('input[name="strong"]').attr("disabled", true);
   });
 
   function checkResults() {

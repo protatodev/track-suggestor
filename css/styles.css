@@ -15,4 +15,18 @@
 .buttonContainer {
   border: 1px solid lightblue;
   text-align: center;
+  background-color: #E2EFFF;
+}
+
+.introHeading {
+  background-image: linear-gradient(#337ab7,#337ab7);
+}
+
+.introHeading h1 {
+  color: white;
+}
+
+.introBody {
+  color: black;
+  background-color: #eee
 }

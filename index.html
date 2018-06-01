@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -21,14 +22,16 @@
       <!-- Build introduction section -->
       <div class="row">
 
-        <div class="col-sm-12">
+        <div class="col-sm-12 introColumn">
           <div class="panel panel-default">
-            <div class=panel-heading>
+            <div class="panel-heading introHeading">
               <h1>This website will help to ensure you are on the right track!</h1>
             </div>
-            <div class="panel-body">
+            <div class="panel-body introBody">
               <img src="img/intro-photo.jpeg" alt="coding">
               <p>One of the most important steps in becoming a computer programmer is making sure it is right for you! Research will help you determine if you are on the right course to meet your goals! Preparedness is crucial in the path to discovering if you will be ready and willing to undertake the journey required to become a successful programmer. The goal of this website is to help assist you in your decision by suggesting a career path and/or language track that you would be both interested and successful at. While the suggestions may not be perfect, they can help to narrow your own search results and open the door to further research.
+              </p>
+              <p>Please feel free to contact us if you have any questions / concerns or are having issues using this site. We would love to hear your feedback and would welcome any suggestions or comments you have regarding your experience.
               </p>
             </div>
           </div>
@@ -46,7 +49,7 @@
                 <h3>Who are you?</h3>
               </div>
               <div class="panel-body bgBody">
-                <p>Please tell us a little about yourself so we can personalize your results!</p>
+                <p>Please tell us your name so we can personalize your results!</p>
                 <hr>
                 <form class="bgForm">
                   <label class="label label-success" for="userName">What is your name?</label>
@@ -56,8 +59,8 @@
             </div>
             <div class="buttonContainer">
               <p>When you have finished selecting your information, you can use the buttons below to either submit or start over.</p>
-              <button type="submit" class="btn btn-danger" id="submit">Submit</button>
-              <button type="reset" class="btn btn-danger" id="reset">Start Over</button>
+              <button type="submit" class="btn btn-default" id="submit">Submit</button>
+              <button type="reset" class="btn btn-default" id="reset">Start Over</button>
             </div>
           </div>
 
@@ -149,6 +152,51 @@
 
       </div>
       <!-- End question columns -->
+
+      <!-- Build results intro section -->
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="jumbotron">
+            <h2><em>Let's have a look at your results!</em></h2>
+          </div>
+        </div>
+      </div>
+      <!-- End results intro section -->
+
+      <!-- Build two-column results display section -->
+      <div class="row">
+
+        <div class="col-sm-6 pre-hidden">
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3>Here's what we discovered from your answers..</h3>
+            </div>
+            <div class="panel-body">
+              <h2 id="track"></h2>
+              <p><strong><span id="resultName"></span></strong>, based on the information you provided, we belive you would be perfect for a track involving the <span id="resultLanguage"></span> language! This path would open the door to a career using a <span id="resultLanguageType"></span> typed language in a <span id="environment"></span> programming environment.</p>
+              <hr>
+              <p>Please check out the section adjacent to this one for information on why we suggested this path for you. Thank you for giving us a try!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 pre-hidden">
+          <div class="well">
+            <h3>Analye your results..</h3>
+            <hr>
+            <p><strong><em>Here is the information we used in determining your results:</em></strong></p>
+            <ul>
+              <li>You indicated you <span id="resultDesktop"></span> know how to make desktop applications.</li>
+              <li>You indicated you <span id="resultWeb"></span> know how to make websites.</li>
+              <li>You indicated that you have <span id="resultWebDev"></span>.</li>
+              <li>You indicated that you have <span id="resultObject"></span>.</li>
+              <li>You indicated that you prefer working with <span id="resultTyped"></span> typed languages.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <!-- End results display section -->
 
     <!-- Closing HTML tags -->
     </div>

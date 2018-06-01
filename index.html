@@ -27,6 +27,7 @@
               <h1>This website will help to ensure you are on the right track!</h1>
             </div>
             <div class="panel-body">
+              <img src="img/intro-photo.jpeg" alt="coding">
               <p>One of the most important steps in becoming a computer programmer is making sure it is right for you! Research will help you determine if you are on the right course to meet your goals! Preparedness is crucial in the path to discovering if you will be ready and willing to undertake the journey required to become a successful programmer. The goal of this website is to help assist you in your decision by suggesting a career path and/or language track that you would be both interested and successful at. While the suggestions may not be perfect, they can help to narrow your own search results and open the door to further research.
               </p>
             </div>
@@ -38,40 +39,113 @@
 
       <!-- Build a three column layout for each question category -->
       <div class="row">
-
-        <div class="col-sm-4 bgColumn">
-          <div class="panel panel-primary">
-            <div class="panel-heading bgHeading">
-              <h3>Who are you?</h3>
-            </div>
-            <div class="panel-body bgBody">
-              <p>Please tell us a little about yourself so we can personalize your results!</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-4 skillsColumn">
-          <div class="panel panel-primary">
-            <div class="panel-heading skillsHeading">
-              <h3>What do you already know?</h3>
-            </div>
-            <div class="panel-body skillsBody">
-              <p>What are you good at? Your current skillset may help us identify tracks you would excel in.</p>
+        <form>
+          <div class="col-sm-4 bgColumn">
+            <div class="panel panel-primary">
+              <div class="panel-heading bgHeading">
+                <h3>Who are you?</h3>
+              </div>
+              <div class="panel-body bgBody">
+                <p>Please tell us a little about yourself so we can personalize your results!</p>
+                <hr>
+                <form class="bgForm">
+                  <label class="label label-success" for="userName">What is your name?</label>
+                  <input class="form-control" type="text" name="userName" id="userName" required>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-sm-4 interestsColumn">
-          <div class="panel panel-primary">
-            <div class="panel-heading interestsHeading">
-              <h3>What are you interested in?<h3>
-            </div>
-            <div class="panel-body interestsBody">
-              <p>Tell us what your interests are! We can help match you to a track that you would love!</p>
+          <div class="col-sm-4 skillsColumn">
+            <div class="panel panel-primary">
+              <div class="panel-heading skillsHeading">
+                <h3>What do you already know?</h3>
+              </div>
+              <div class="panel-body skillsBody">
+                <p>What are you good at? Your current skillset may help us identify tracks you would excel in.</p>
+                <hr>
+                <form class="skillsForm">
+                  <div class="skillsRadio">
+                    <h4>Are you any good at coding, in general?</h4>
+                    <label class="control-label radio-inline" for="yesCoding">
+                      <input type="radio" id="yesCoding" name="coding">
+                      Yes
+                    </label>
+                    <label class="control-label radio-inline" for="noCoding">
+                      <input type="radio" id="noCoding" name="coding">
+                      No
+                    </label>
+                    <h4>Do you know how to make desktop applications?</h4>
+                    <label class="control-label radio-inline" for="yesDesktop">
+                      <input type="radio" id="yesObject" name="desktop">
+                      Yes
+                    </label>
+                    <label class="control-label radio-inline" for="noDesktop">
+                      <input type="radio" id="noDesktop" name="desktop">
+                      No
+                    </label>
+                    <h4>Do know how to build websites?</h4>
+                    <label class="control-label radio-inline" for="yesWeb">
+                      <input type="radio" id="yesObject" name="web">
+                      Yes
+                    </label>
+                    <label class="control-label radio-inline" for="noWeb">
+                      <input type="radio" id="noWeb" name="web">
+                      No
+                    </label>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
 
+          <div class="col-sm-4 interestsColumn">
+            <div class="panel panel-primary">
+              <div class="panel-heading interestsHeading">
+                <h3>What are you interested in?<h3>
+              </div>
+              <div class="panel-body interestsBody">
+                <p>Tell us what your interests are! We can help match you to a track that you would love!</p>
+                <hr>
+                <form class="interestsForm">
+                  <div class="skillsRadio">
+                    <h4>Are you interested in web development?</h4>
+                    <label class="control-label radio-inline" for="yesWebDev">
+                      <input type="radio" id="yesWebDev" name="webDev">
+                      Yes
+                    </label>
+                    <label class="control-label radio-inline" for="noWebDev">
+                      <input type="radio" id="noWebDev" name="webDev">
+                      No
+                    </label>
+                    <h4>Does the idea of object-oriented programming interest you?</h4>
+                    <label class="control-label radio-inline" for="yesObject">
+                      <input type="radio" id="yesObject" name="object">
+                      Yes
+                    </label>
+                    <label class="control-label radio-inline" for="noObject">
+                      <input type="radio" id="noObject" name="object">
+                      No
+                    </label>
+                    <h4>Do you prefer strongly typed languages?</h4>
+                    <label class="control-label radio-inline" for="yesStrong">
+                      <input type="radio" id="yesStrong" name="strong">
+                      Yes
+                    </label>
+                    <label class="control-label radio-inline" for="noStrong">
+                      <input type="radio" id="noStrong" name="strong">
+                      No
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button type="submit" class="btn btn-danger" id="submit">Submit</button>
+            <button type="reset" class="btn btn-danger" id="reset">Start Over</button>
+          </div>
+        </form>
       </div>
       <!-- End question columns -->
 

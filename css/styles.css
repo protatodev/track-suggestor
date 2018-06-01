@@ -5,3 +5,9 @@
 .jumbotron {
   text-align: center;
 }
+
+.panel-body img {
+  height: 200px;
+  float: left;
+  padding-right: 10px;
+}

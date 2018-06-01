@@ -67,6 +67,14 @@ $(document).ready(function() {
       $("#resultTyped").text("weakly");
     }
 
+    $("#moreInfo").text(language);
+
+    if(result == 0) {
+      $("#detailedLangInfo").text("C# was designed to be simple and easy to use. Since C# is a high level language, it reads somewhat closer to English. In addition, C# abstracts away (i.e. handles for you) most of the complex details of the machine (computer) so you can focus on programming instead of worrying about the little details many consider both tedious and difficult.If you're planning to get into C# game development, then Unity is also designed to be easy to get started with as well. As a lower level language than very high level languages such as Python, it may take time to learn everything about C#, and sometimes it may take a bit more code to get some working prototype. However, as you get a hang of things, C# will become easier.");
+    } else if(result == 1) {
+      
+    }
+
 
     $(".pre-hidden").hide().fadeIn(3000);
     window.scrollTo(0,document.body.scrollHeight);

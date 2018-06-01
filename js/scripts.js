@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $(".pre-hidden").hide();
+  resetForms();
 
   $(".superForm").submit(function(event) {
     var result = checkResults();
@@ -89,6 +90,7 @@ $(document).ready(function() {
     $("input").attr("disabled", false);
     $("span").text("");
     $(".pre-hidden").show().fadeOut();
+    resetForms();
   });
 
   $("input").click(function() {
@@ -118,5 +120,11 @@ $(document).ready(function() {
     }
 
   };
+
+  function resetForms() {
+    for (i = 0; i < document.forms.length; i++) {
+        document.forms[i].reset();
+    }
+  }
 
 });

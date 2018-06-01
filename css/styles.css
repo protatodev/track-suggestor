@@ -1,9 +1,17 @@
 .panel-heading {
   text-align: center;
+  background-image: linear-gradient(#76b852, #8DC26F);
+}
+
+body {
+  background-image: url("../img/background.jpg");
+  opacity: 0.8;
 }
 
 .jumbotron {
   text-align: center;
+  background-image: linear-gradient(#76b852, green);
+  color: white;
 }
 
 .panel-body img {
@@ -15,11 +23,12 @@
 .buttonContainer {
   border: 1px solid lightblue;
   text-align: center;
-  background-color: #E2EFFF;
+  color: white;
+  background-image: linear-gradient(#093028, #237A57);
 }
 
 .introHeading {
-  background-image: linear-gradient(#337ab7,#337ab7);
+  background-image: linear-gradient(#76b852, green);
 }
 
 .introHeading h1 {
@@ -28,5 +37,5 @@
 
 .introBody {
   color: black;
-  background-color: #eee
+  background-image: linear-gradient(#ECE9E6, #FFFFFF);
 }
